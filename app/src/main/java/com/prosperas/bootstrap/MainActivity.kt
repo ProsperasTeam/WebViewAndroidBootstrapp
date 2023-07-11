@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 import com.prosperas.marketplace.CreditoSDK
 //import com.creditosegundos.creditosdk.CreditoSDK
 //import com.google.gson.Gson
@@ -24,11 +25,19 @@ class MainActivity : AppCompatActivity() {
 
         creditoSegundos?.setOnClickListener {
             try{
+                var new_locale = findViewById<TextInputEditText>(R.id.newLocale).text.toString()
+                var new_apikey = findViewById<TextInputEditText>(R.id.newApikey).text.toString()
+                var new_sessionId = findViewById<TextInputEditText>(R.id.newSessionId).text.toString()
 
                 CreditoSDK.init(applicationContext)
-                CreditoSDK.startCredit(this,
+                /*CreditoSDK.startCredit(this,
                     "d/fvIRnSFf2gQslGnCVm/pz7u8K5JTkEFY5w7KJ1rSawvF0tFj68wuL+Zuy2DrEkr8I/dqUj27iW0fg4RyMaU+jsqimIAsTVZnJjjYWpymAwyFRXa7rZyk8nz0jL1DWG",
-                    "53788FFB-B0C2-48C7-929F-7130C2A52128","es-rMX")
+                    "53788FFB-B0C2-48C7-929F-7130C2A52128","es-rMX")*/
+
+                CreditoSDK.startCredit(this,
+                    new_sessionId,
+                    new_apikey,
+                    new_locale)
 
             }catch (e: Exception){
                 Toast.makeText(applicationContext, "ERROR $e", Toast.LENGTH_LONG).show()

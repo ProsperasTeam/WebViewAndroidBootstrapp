@@ -34,7 +34,7 @@ open class CreditoSDK {
 
                 val intent = Intent(context, ProsperasSDK::class.java)
                 intent.putExtra("sessionId", sessionId)
-                intent.putExtra("apiKey", apiKey)
+                intent.putExtra("apiKey2", apiKey)
                 intent.putExtra("locale", locale_2)
                 sharedpre = SharedPrefs(context)
                 sharedpre.setPrefString("X-Api-Key",apiKey)

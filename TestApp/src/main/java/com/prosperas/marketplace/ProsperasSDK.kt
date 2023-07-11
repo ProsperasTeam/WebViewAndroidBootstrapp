@@ -17,13 +17,20 @@ import com.prosperas.marketplace.databinding.ActivityMainBinding
 class ProsperasSDK : AppCompatActivity() {
     private var fileChooserCallback: ValueCallback<Array<Uri>>? = null
     private lateinit var binding: ActivityMainBinding
+    var locale = ""
+    var sessionId = ""
+    var newApiKey = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        GenerateWebView("https://creditos-web.prosperas.com?sessionid=d/fvIRnSFf2gQslGnCVm/pz7u8K5JTkEFY5w7KJ1rSawvF0tFj68wuL+Zuy2DrEkr8I/dqUj27iW0fg4RyMaU+jsqimIAsTVZnJjjYWpymAwyFRXa7rZyk8nz0jL1DWG&apikey=f0627e97-48fb-456b-ba05-c20ce8c56105&locale=es-rMX")
+        locale = intent.extras?.getString("locale").toString()
+        newApiKey = intent.extras?.getString("apiKey2").toString()
+        sessionId = intent.extras?.getString("sessionId").toString()
+        var url = "https://creditos-web.prosperas.com?sessionid=$sessionId&apikey=$newApiKey&locale=$locale"
+        GenerateWebView(url)
     }
 
     override fun onPause() {
