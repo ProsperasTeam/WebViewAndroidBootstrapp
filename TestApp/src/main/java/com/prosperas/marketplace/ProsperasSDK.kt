@@ -31,6 +31,12 @@ class ProsperasSDK : AppCompatActivity() {
         sessionId = intent.extras?.getString("sessionId").toString()
         var url = "https://creditos-web.prosperas.com?sessionid=$sessionId&apikey=$newApiKey&locale=$locale"
         GenerateWebView(url)
+
+        /*val btnRegresar = view.findViewById<MaterialButton>(R.id.btnRegresar)
+        btnRegresar.setOnClickListener{
+            println("CLICK")
+            view.loadUrl(home.toString())
+        }*/
     }
 
     override fun onPause() {
