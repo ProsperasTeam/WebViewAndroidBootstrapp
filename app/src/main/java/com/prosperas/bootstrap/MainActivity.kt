@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.TextInputEditText
+import android.widget.EditText
 import com.prosperas.marketplace.CreditoSDK
 //import com.creditosegundos.creditosdk.CreditoSDK
 //import com.google.gson.Gson
@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         creditoSegundos?.setOnClickListener {
             try{
-                var new_locale = findViewById<TextInputEditText>(R.id.newLocale).text.toString()
-                var new_apikey = findViewById<TextInputEditText>(R.id.newApikey).text.toString()
-                var new_sessionId = findViewById<TextInputEditText>(R.id.newSessionId).text.toString()
+                var new_locale = findViewById<EditText>(R.id.newLocale).text.toString()
+                var new_apikey = findViewById<EditText>(R.id.newApikey).text.toString()
+                var new_sessionId = findViewById<EditText>(R.id.newSessionId).text.toString()
 
                 CreditoSDK.init(applicationContext)
                 /*CreditoSDK.startCredit(this,
