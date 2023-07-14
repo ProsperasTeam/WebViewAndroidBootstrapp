@@ -34,8 +34,11 @@ class ProsperasSDK : AppCompatActivity() {
         GenerateWebView(url)
 
         val btnRegresar = view.findViewById<Button>(R.id.botonRegresar)
+        if(locale == "en-rUS"){
+            btnRegresar.text = "Back"
+        }
+
         btnRegresar.setOnClickListener{
-            println("CLICK")
             GenerateWebView(url)
         }
     }
