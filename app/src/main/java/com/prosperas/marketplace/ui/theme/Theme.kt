@@ -1,4 +1,4 @@
-package com.prosperas.bootstrap.ui.theme
+package com.prosperas.marketplace.ui.theme
 
 import android.app.Activity
 import android.os.Build

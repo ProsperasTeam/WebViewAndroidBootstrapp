@@ -8,22 +8,23 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.webkit.*
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.prosperas.marketplace.databinding.ActivityMainBinding
+import com.prosperas.marketplace.databinding.ActivitySdkBinding
 
 //import kotlinx.android.synthetic.main.activity_main.*
 
 
 class ProsperasSDK : AppCompatActivity() {
     private var fileChooserCallback: ValueCallback<Array<Uri>>? = null
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySdkBinding
     var locale = ""
     var sessionId = ""
     var newApiKey = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySdkBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         locale = intent.extras?.getString("locale").toString()
@@ -32,11 +33,11 @@ class ProsperasSDK : AppCompatActivity() {
         var url = "https://creditos-web.prosperas.com?sessionid=$sessionId&apikey=$newApiKey&locale=$locale"
         GenerateWebView(url)
 
-        /*val btnRegresar = view.findViewById<MaterialButton>(R.id.btnRegresar)
+        val btnRegresar = view.findViewById<Button>(R.id.botonRegresar)
         btnRegresar.setOnClickListener{
             println("CLICK")
-            view.loadUrl(home.toString())
-        }*/
+            GenerateWebView(url)
+        }
     }
 
     override fun onPause() {

@@ -1,4 +1,4 @@
-package com.prosperas.bootstrap
+package com.prosperas.marketplace
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.EditText
+import com.prosperas.marketplace.R
 import com.prosperas.marketplace.CreditoSDK
 //import com.creditosegundos.creditosdk.CreditoSDK
 //import com.google.gson.Gson

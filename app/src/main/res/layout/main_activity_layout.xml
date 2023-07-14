@@ -10,6 +10,7 @@
         android:id="@+id/newLocale"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:text="es-rMX"
         android:layout_marginTop="20dp"
         android:background="@color/white"
         android:textColor="@color/black"
@@ -24,6 +25,7 @@
     <android.widget.EditText
         android:id="@+id/newSessionId"
         android:layout_width="0dp"
+        android:text="d/fvIRnSFf2gQslGnCVm/pz7u8K5JTkEFY5w7KJ1rSawvF0tFj68wuL+Zuy2DrEkr8I/dqUj27iW0fg4RyMaU+jsqimIAsTVZnJjjYWpymAwyFRXa7rZyk8nz0jL1DWG"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@color/white"
@@ -39,6 +41,7 @@
     <android.widget.EditText
         android:id="@+id/newApikey"
         android:layout_width="0dp"
+        android:text="f0627e97-48fb-456b-ba05-c20ce8c56105"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@color/white"
