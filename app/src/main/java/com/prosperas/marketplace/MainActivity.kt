@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 var new_locale = findViewById<EditText>(R.id.newLocale).text.toString()
                 var new_apikey = findViewById<EditText>(R.id.newApikey).text.toString()
                 var new_sessionId = findViewById<EditText>(R.id.newSessionId).text.toString()
+                var new_url = findViewById<EditText>(R.id.newUrl).text.toString()
 
                 CreditoSDK.init(applicationContext)
                 /*CreditoSDK.startCredit(this,
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
                 CreditoSDK.startCredit(this,
                     new_sessionId,
                     new_apikey,
-                    new_locale)
+                    new_locale,
+                    new_url)
 
             }catch (e: Exception){
                 Toast.makeText(applicationContext, "ERROR $e", Toast.LENGTH_LONG).show()
