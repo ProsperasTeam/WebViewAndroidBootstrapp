@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity() {
                     new_sessionId,
                     new_apikey,
                     new_locale,
-                    new_url)
+                    new_url,
+                    "#00FF00")
 
             }catch (e: Exception){
                 Toast.makeText(applicationContext, "ERROR $e", Toast.LENGTH_LONG).show()
